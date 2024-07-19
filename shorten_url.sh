@@ -15,13 +15,13 @@ if [ -z "$url" ]; then
   fi
 fi
 
-# URL verkuerzen
+# Eine kurze URL erzeugen:
 short_url=$(curl -s "http://tinyurl.com/api-create.php?url=$url")
 
-# Verkuerzte URL ausgeben
-echo "Verkuerzte URL: $short_url"
+# Verkuerzte URL ausgeben:
+echo "$short_url"
 
-# Verkuerzte URL in die Zwischenablage kopieren (fuer Linux)
+# Verkuerzte URL in die Zwischenablage kopieren (fuer Linux):
 echo "$short_url" | xclip -selection clipboard
 
 # Fuer macOS kann stattdessen pbcopy verwendet werden:
